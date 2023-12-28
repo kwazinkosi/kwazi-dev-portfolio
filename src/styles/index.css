@@ -2,7 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+
 html {
   scroll-behavior: smooth;
-  background-color: #041525;
+  background-color: #08223a;
 }
+
+
+.home {
+    background-color: #08223a;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, sans-serif;
+    /* padding: calc(5px + 1vw); */
+}
+/* Image */
+
+ .image {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* aligns the hexagons to the right */
+    align-items: center;
+    position: relative;
+    background-color: none;
+    margin: calc(10px + 7vw);
+} 
+
