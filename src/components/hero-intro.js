@@ -1,7 +1,7 @@
 export default function HeroIntro() {
   return (
-    <div className="flex flex-col items-center justify-center h-screen  text-white sm:text-lg md:text-xl lg:text-2xl">
-      <h1 className="text-5xl font-bold mb-4">
+    <div className="flex flex-col items-center justify-center text-white sm:text-lg md:text-xl lg:text-2xl m-6 md:m-8 lg:m-12">
+      <h1 className="text-5xl font-bold mb-6 text-left sm:text-5xl md:text-6xl lg:text-7xl">
         Hi, I'm Kwazi
       </h1>
       <p className="text-lg text-left max-w-xl mb-8 sm:text-lg md:text-xl lg:text-2xl">
@@ -13,21 +13,6 @@ export default function HeroIntro() {
         meets seamless functionality. 
       </p>
     </div>
-    /* <div className="hero-intro">
-      <h1>
-        Hi, I'm <span className="highlight">Kwazi</span>.
-      </h1>
-      <h2>
-        I'm a <span className="highlight">web developer</span> based in{" "}
-        <span className="highlight">Johannesburg</span>.
-      </h2>
-      <p>
-        I'm passionate about creating{" "}
-        <span className="highlight">beautiful</span>,{" "}
-        <span className="highlight">responsive</span> websites that{" "}
-        <span className="highlight">work</span>.
-      </p>
-      
-    </div>*/
+
   );
 }

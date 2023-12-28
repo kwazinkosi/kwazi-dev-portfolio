@@ -4,18 +4,15 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ["sofia, monserrat, roboto, sans-serif"],
-      },
-
+      
       colors: {
-        primary: "#27A98F",
+        primary: "#12afe6",
         secondary: "#F9F9F9",
         tertiary1: "#02222a",
-        tertiary2: "#08284a",
+        tertiary2: "#08384a",
         "primary-text": "#000000",
         "secondary-text": "#000000",
-        "tertiary-text": "#000000",
+        "tertiary-text": "#12bfd6",
         "primary-bg": "#F9F9F9",
         "secondary-bg": "#F9F9F9",
         "tertiary-bg": "#F9F9F9",
@@ -23,6 +20,20 @@ module.exports = {
         "secondary-border": "#000000",
         "tertiary-border": "#000000",
       },
+      fontFamily: {
+        sans: ["monserrat, roboto, sofia, sans-serif"],
+      },
+      boxShadow: {
+        primary: "0 4px 15px 0 rgba(18, 159, 182, 0.39)",
+        text: "0 1px 3px #23bff6",
+      },
+      backgroundImage: (theme) => ({
+        "border-gradient":
+          "linear-gradient(to bottom, var(--color-tertiary1), var(--color-primary))",
+      }),
+      borderColors: (theme) => ({
+        gradient: "transparent",
+      }),
     },
     plugins: [],
   },

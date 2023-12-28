@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
 
 
 html {
@@ -24,10 +26,41 @@ html {
  .image {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* aligns the hexagons to the right */
+    justify-content: flex-end;
     align-items: center;
     position: relative;
     background-color: none;
-    margin: calc(10px + 7vw);
+    /* margin: calc(16px + 4vw); */
 } 
 
+.text-with-shadow, .mobile-nav-text {
+  font-family: 'Inconsolata', monospace;
+  font-size: calc(6px + 1vw);
+  font-weight: 500;
+  letter-spacing: 0.015em; 
+  display: inline-block; /* Ensures box shadow is applied to each letter individually */
+  text-shadow: 1px 1px 4px rgba(65, 193, 231, 0.87);
+}
+
+.text-with-shadow:hover {
+  text-shadow: 3px 3px 15px rgb(200, 240, 252); /* Box shadow properties */
+  letter-spacing: 0.025em; 
+  font-weight:bolder;
+  transition: 0.3s ease-in-out;
+}
+
+.mobile-nav-text{
+  font-size: theme('fontSize.2xl');
+}
+/* Add line after each overlay-item */
+.overlay-item:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 5px;
+  border-radius: 0 0 50% 50%;
+  width: 70vw;
+  margin-top: 1.2rem;
+  background: linear-gradient(to bottom, theme('colors.tertiary1'), theme('colors.primary'));
+  box-shadow: 0 1px 7px rgba(90, 217, 243, 0.5);
+}
