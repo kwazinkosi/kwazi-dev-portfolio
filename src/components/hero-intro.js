@@ -1,7 +1,7 @@
-export default function HeroIntro() {
+export default function HeroIntro(socials) {
   return (
     <div className="flex flex-col items-center justify-center text-white sm:text-lg md:text-xl lg:text-2xl m-6 md:m-8 lg:m-12">
-      <h1 className="text-5xl font-bold mb-6 text-left sm:text-5xl md:text-6xl lg:text-7xl">
+      <h1 className="text-5xl font-bold mb-6 text-left ">
         Hi, I'm Kwazi
       </h1>
       <p className="text-lg text-left max-w-xl mb-8 sm:text-lg md:text-xl lg:text-2xl">
@@ -12,6 +12,9 @@ export default function HeroIntro() {
         Let's embark on a digital adventure where innovation
         meets seamless functionality. 
       </p>
+      <div className="flex flex-row justify-center items-center ">
+         <socials.socials/>
+      </div>
     </div>
 
   );

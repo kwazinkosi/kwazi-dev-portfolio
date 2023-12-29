@@ -4,7 +4,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  
+
   // Detect initial orientation
   let isLandscape = window.matchMedia("(orientation: landscape)").matches;
 
@@ -27,12 +27,12 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="from-tertiary1 to-tertiary2 bg-gradient-to-b fixed top-0 w-full z-10 border-b-2 border-primary border-gradient hover:shadow-primary transition duration-500 ease-in-out">
+    <nav className="nav from-tertiary1 to-tertiary2 bg-gradient-to-b fixed top-0 w-full z-10  hover:shadow-primary transition duration-500 ease-in-out">
       <div className="container mx-auto flex items-center justify-between my-2">
         <div className="flex items-center">
           <a
             href="/"
-            className="z-20 text-white text-lg font-bold sm:mx-6 md:mx-12 lg:mx-16 mx-6"
+            className="z-20 text-secondary text-lg font-bold sm:mx-6 md:mx-12 lg:mx-16 mx-6"
           >
             Your Logo
           </a>
@@ -53,7 +53,7 @@ export default function Navbar() {
         <div
           className={`lg:flex md:flex items-center sm:mx-6 md:mx-12 lg:mx-16 mx-6 ${
             isOpen
-              ? "fixed z-0 top-0 left-0 right-0 bottom-0 mt-16 pt-6 h-screen bg-gradient-to-b from-tertiary1 to-tertiary2  bg-opacity-100 flex flex-col text-center text-xl"
+              ? "fixed z-0 top-0 left-0 right-0 bottom-0 mt-12 pt-auto h-screen bg-gradient-to-b from-tertiary1 to-tertiary2  bg-opacity-100 flex flex-col text-center text-xl"
               : "hidden"
           }`}
         >
@@ -68,7 +68,7 @@ export default function Navbar() {
             Home
           </a>
           <a
-            href="/portfolio"
+            href="/projects"
             className={` text-white py-4 ${
               isOpen
                 ? "mobile-nav-text overlay-item "

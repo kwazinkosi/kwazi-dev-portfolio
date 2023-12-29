@@ -6,13 +6,15 @@
 
 
 html {
-  scroll-behavior: smooth;
-  background-color: #08223a;
+  /* scroll-behavior: smooth; */
+  /* background-color: #08223a; */
+  background: linear-gradient(to bottom, theme('colors.tertiary2'), theme('colors.tertiary1'));
 }
 
 
 .home {
-    background-color: #08223a;
+  background: linear-gradient(to bottom, theme('colors.tertiary2'), theme('colors.tertiary1'));
+    /* background: linear-gradient(to bottom, #08223a, #0a8ffc); */
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -53,7 +55,7 @@ html {
   font-size: theme('fontSize.2xl');
 }
 /* Add line after each overlay-item */
-.overlay-item:after {
+.overlay-item:after, .nav:after{
   content: '';
   display: block;
   width: 0;
@@ -63,4 +65,13 @@ html {
   margin-top: 1.2rem;
   background: linear-gradient(to bottom, theme('colors.tertiary1'), theme('colors.primary'));
   box-shadow: 0 1px 7px rgba(90, 217, 243, 0.5);
+}
+
+.nav:after{
+  width: 100vw !important;  
+  margin-top: 0;
+  height: 4px;
+  border-radius: 0 0 0 0;
+  background: linear-gradient(to bottom, theme('colors.tertiary2'), theme('colors.primary'));
+  box-shadow: 0 1px 6px rgba(90, 217, 243, 0.5);
 }
