@@ -52,6 +52,13 @@ html {
   transition: 0.3s ease-in-out;
 }
 
+.active-page{
+
+  letter-spacing: 0.02em; 
+  font-weight: extra-bold;
+  color: theme('colors.primary');
+  
+}
 .mobile-nav-text{
   font-size: theme('fontSize.2xl');
 }

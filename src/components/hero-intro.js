@@ -1,7 +1,5 @@
-import Socials from "./socials";
-import Button from "./button";
-
-const IntroText = ({text}) => {
+// Desc: Hero intro component for the home page
+const IntroText = ({text, index}) => {
   return ( 
     <p className="text-xl text-left max-w-xl mb-4 sm:text-lg md:text-xl lg:text-2xl">
       {text}
@@ -24,8 +22,8 @@ const HeroIntro = ({heading, introTexts}) => {
       
       {/* Intro paragraphs */}
       {
-        introTexts.map(text =>  (
-          <IntroText text={text} />
+        introTexts.map((text, index) => (
+          <IntroText key={index} text={text} />
         ))
       }
 

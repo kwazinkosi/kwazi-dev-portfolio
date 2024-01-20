@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { useMatch } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import logo from "../assets/images/mylogo.png";
@@ -6,16 +8,18 @@ import logo from "../assets/images/mylogo.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const matchContact = useMatch("/contact");
+  const matchAbout = useMatch("/about");
+  const matchProjects = useMatch("/projects");
+  const matchHome = useMatch("/");
+
 
   // Detect initial orientation
   let isLandscape = window.matchMedia("(orientation: landscape)").matches;
 
   // Listen for orientation changes
-  window.addEventListener(
-    "resize",
-    function () {
+  window.addEventListener("resize", function () {
       isLandscape = window.matchMedia("(orientation: landscape)").matches;
-
       // If the device is in landscape mode, close the overlay
       if (isLandscape && isOpen) {
         toggleNavbar();
@@ -32,11 +36,10 @@ export default function Navbar() {
     <nav className="nav from-tertiary1 to-tertiary2 bg-gradient-to-b fixed top-0 w-full z-10  hover:shadow-primary transition duration-500 ease-in-out">
       <div className="container mx-auto flex items-center justify-between my-2">
         <div className="flex items-center ml-6">
-          <a href="/" className=""> 
+          <NavLink to="/" className=""> 
             <img src={logo} alt="logo" className="w-10 h-8 sm:w-14 sm:h-8 md:w-14 md:h-10 lg:w-16 lg:h-12" />
-          </a>
+          </NavLink>
         </div>
-
         {/* Bars icon for small screens */}
         <div
           className="flex md:hidden cursor-pointer z-20"
@@ -54,30 +57,33 @@ export default function Navbar() {
               ? "fixed z-0 top-0 left-0 right-0 bottom-0 mt-12 pt-auto h-screen bg-gradient-to-b from-tertiary1 to-tertiary2  bg-opacity-100 flex flex-col text-center text-xl"
               : "hidden"
           }`}>
-          <a href="/" className={` text-white py-4 ${ 
+          <NavLink to="/" className={` ${matchHome ? 'active-page' : 'text-white'} py-4 ${ 
               isOpen
                 ? "text-2xl overlay-item mobile-nav-text"
                 : "mx-4 text-with-shadow hover:text-secondary hover:font-bold transition duration-700 ease-in-out"
-            }`}> Home
-          </a>
-          <a href="/projects" className={` text-white py-4 ${
+            }`}
+            > Home
+          </NavLink>
+          <NavLink to="/projects" className={`${matchProjects ? 'active-page' : 'text-white'} py-4 ${
               isOpen
                 ? "mobile-nav-text overlay-item "
                 : "mx-4 text-with-shadow hover:text-secondary hover:font-bold transition duration-700 ease-in-out"
-            }`}> Portfolio
-          </a>
-          <a href="/about" className={` text-white py-4 ${
+            }`} 
+            > Portfolio
+          </NavLink>
+          <NavLink to="/about" className={`${matchAbout ? 'active-page' : 'text-white'} py-4 ${
               isOpen
                 ? " overlay-item mobile-nav-text"
                 : "mx-4 text-with-shadow hover:text-secondary hover:font-bold transition duration-700 ease-in-out"
             }`}> About
-          </a>
-          <a href="/contact" className={` text-white py-4 ${
+          </NavLink>
+          <NavLink to="/contact" className={`${matchContact ? 'active-page' : 'text-white'} py-4 ${
               isOpen
-                ? " overlay-item mobile-nav-text"
+                ? "overlay-item mobile-nav-text"
                 : "mx-4 text-with-shadow hover:text-secondary hover:font-bold transition duration-700 ease-in-out"
-            }`}>Contact
-          </a>
+            }`}
+            >Contact
+          </NavLink>
         </div>
       </div>
     </nav>

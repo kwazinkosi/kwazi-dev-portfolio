@@ -7,7 +7,7 @@ import Projects from './pages/Projects/projects';
 import Contact from './pages/Contact/contact';
 
 
-function App() {
+export default function App() {
   return (
     <Router>
       <Routes>
@@ -20,4 +20,3 @@ function App() {
   );
 }
 
-export default App;
