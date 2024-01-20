@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import logo from "../assets/images/mylogo.png";
+
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,12 +31,9 @@ export default function Navbar() {
   return (
     <nav className="nav from-tertiary1 to-tertiary2 bg-gradient-to-b fixed top-0 w-full z-10  hover:shadow-primary transition duration-500 ease-in-out">
       <div className="container mx-auto flex items-center justify-between my-2">
-        <div className="flex items-center">
-          <a
-            href="/"
-            className="z-20 text-secondary text-lg font-bold sm:mx-6 md:mx-12 lg:mx-16 mx-6"
-          >
-            Your Logo
+        <div className="flex items-center ml-6">
+          <a href="/" className=""> 
+            <img src={logo} alt="logo" className="w-10 h-8 sm:w-14 sm:h-8 md:w-14 md:h-10 lg:w-16 lg:h-12" />
           </a>
         </div>
 
@@ -50,52 +49,34 @@ export default function Navbar() {
         </div>
 
         {/* Overlay menu for small screens */}
-        <div
-          className={`lg:flex md:flex items-center sm:mx-6 md:mx-12 lg:mx-16 mx-6 ${
-            isOpen
+        {/* TODO: change bar icon to close icon when overlay is open */}
+        <div className={`lg:flex md:flex items-center sm:mx-6 md:mx-12 lg:mx-16 mx-6 ${isOpen
               ? "fixed z-0 top-0 left-0 right-0 bottom-0 mt-12 pt-auto h-screen bg-gradient-to-b from-tertiary1 to-tertiary2  bg-opacity-100 flex flex-col text-center text-xl"
               : "hidden"
-          }`}
-        >
-          <a
-            href="/"
-            className={` text-white py-4 ${
+          }`}>
+          <a href="/" className={` text-white py-4 ${ 
               isOpen
                 ? "text-2xl overlay-item mobile-nav-text"
-                : "mx-4 text-with-shadow hover:text-primary hover:font-bold transition duration-700 ease-in-out"
-            }`}
-          >
-            Home
+                : "mx-4 text-with-shadow hover:text-secondary hover:font-bold transition duration-700 ease-in-out"
+            }`}> Home
           </a>
-          <a
-            href="/projects"
-            className={` text-white py-4 ${
+          <a href="/projects" className={` text-white py-4 ${
               isOpen
                 ? "mobile-nav-text overlay-item "
-                : "mx-4 text-with-shadow hover:text-primary hover:font-bold transition duration-700 ease-in-out"
-            }`}
-          >
-            Portfolio
+                : "mx-4 text-with-shadow hover:text-secondary hover:font-bold transition duration-700 ease-in-out"
+            }`}> Portfolio
           </a>
-          <a
-            href="/about"
-            className={` text-white py-4 ${
+          <a href="/about" className={` text-white py-4 ${
               isOpen
                 ? " overlay-item mobile-nav-text"
-                : "mx-4 text-with-shadow hover:text-primary hover:font-bold transition duration-700 ease-in-out"
-            }`}
-          >
-            About
+                : "mx-4 text-with-shadow hover:text-secondary hover:font-bold transition duration-700 ease-in-out"
+            }`}> About
           </a>
-          <a
-            href="/contact"
-            className={` text-white py-4 ${
+          <a href="/contact" className={` text-white py-4 ${
               isOpen
                 ? " overlay-item mobile-nav-text"
-                : "mx-4 text-with-shadow hover:text-primary hover:font-bold transition duration-700 ease-in-out"
-            }`}
-          >
-            Contact
+                : "mx-4 text-with-shadow hover:text-secondary hover:font-bold transition duration-700 ease-in-out"
+            }`}>Contact
           </a>
         </div>
       </div>

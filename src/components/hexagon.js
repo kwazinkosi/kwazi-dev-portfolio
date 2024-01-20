@@ -1,9 +1,9 @@
-import photo from "../assets/images/business-man-4.png";
+import photo from "../assets/images/kwazi.png";
 import '../styles/hexagon.css';
 
 export default function Hexagon() {
     return (
-      <div className="hexagon-container sm:m-6 md:m-8 lg:m-12 lg:ml-24">
+      <div className="hexagon-container sm:m-6 md:m-8 lg:m-12 lg:ml-12">
         <div className="hexagon" >
           <svg  style={{visibility: "hidden", position: "absolute", width: "0", height: "0", xmlns: "http://www.w3.org/2000/svg"}}>
             

@@ -3,6 +3,7 @@ import HeroIntro from "../../components/hero-intro";
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 import Socials from "../../components/socials"; 
+import Button from "../../components/button";
 
 // TODO: polish up the colors, footer and socials components
 // TODO: add a favicon
@@ -10,18 +11,38 @@ import Socials from "../../components/socials";
 // TODO: add a loading page
 // TODO: remove unnecessary margins and paddings
 
+const introTexts = [
+  "—A passionate fullstack web developer based in Johannesburg. I craft dynamic web solutions with creativity and precision. ", 
+  "Let's embark on a digital adventure where innovation meets seamless functionality." 
+];
+const heading = "Hi, I'm Kwazi";
+
+
 export default function Home() {
   return (
-    <div className="z-10 h-screen bg-gradient-to-b from-tertiary1 to-tertiary2">
+    <div className="flex flex-col min-h-screen z-10 bg-gradient-to-b from-tertiary1 to-tertiary2 overflow-x-hidden">
       <Navbar className =""/>
-      <div className="mt-16 pt-16 sm:pt-20 md:pt-auto md:mt-20 lg:pt-auto lg:mt-20 flex items-center justify-center sm:p-6 md:p-8 lg:p-12 flex-col md:flex-row">
-        <HeroIntro className="" socials={Socials} />
-        <HeroImage className="" />
-        
+      <div className="flex flex-col justify-center flex-grow">
+        <div className="mt-16 md:mt-20 lg:mt-20 flex flex-grow items-center justify-center  flex-col sm:flex-row md:flex-row lg:flex-row">
+          <HeroIntro heading={heading} introTexts={introTexts} />  
+          <HeroImage /> 
+          {/* <div className="sm:hidden my-10">
+            <Socials />
+          </div> */}
+        </div>
+        <div className="flex flex-col items-center justify-center sm:justify-start md:justify-center lg:justify-center mb-10 md:mb-20 lg:mb-20 sm:flex-row md:flex-row lg:flex-row md:w-4/6 lg:w-1/2 sm:w-full lg:-mt-20 md:-mt-6 sm:-mt-4 mt-8 mx-4 md:mx-0">
+          <div className="mb-4 sm:mb-0 sm:mr-4"> 
+            <Button text="Get in touch"/>
+          </div>
+          <div>  
+            <Socials />
+          </div>
+        </div>
+
       </div>
       <div className="">
-        <Footer className="" socials={Socials} />
-      </div>
-    </div>
+          <Footer className="" socials={Socials} />
+        </div>
+    </div> 
   );
 }

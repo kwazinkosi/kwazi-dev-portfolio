@@ -6,7 +6,8 @@
 
 
 html {
-  /* scroll-behavior: smooth; */
+  
+  scroll-behavior: smooth;
   /* background-color: #08223a; */
   background: linear-gradient(to bottom, theme('colors.tertiary2'), theme('colors.tertiary1'));
 }
@@ -20,7 +21,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Verdana, sans-serif;
+    /* font-family: 'overpass', 'firacode'; */
     /* padding: calc(5px + 1vw); */
 }
 /* Image */
@@ -38,16 +39,16 @@ html {
 .text-with-shadow, .mobile-nav-text {
   font-family: 'Inconsolata', monospace;
   font-size: calc(6px + 1vw);
-  font-weight: 500;
+  font-weight:bold;
   letter-spacing: 0.015em; 
   display: inline-block; /* Ensures box shadow is applied to each letter individually */
-  text-shadow: 1px 1px 4px rgba(65, 193, 231, 0.87);
+  /* text-shadow: 1px 1px 2px  rgba(248, 249, 250, 0.87);  */
 }
 
 .text-with-shadow:hover {
-  text-shadow: 3px 3px 15px rgb(200, 240, 252); /* Box shadow properties */
+  /* text-shadow: 4px 3px 16px theme(colors.secondary); */
   letter-spacing: 0.025em; 
-  font-weight:bolder;
+  font-weight: bolder;
   transition: 0.3s ease-in-out;
 }
 
@@ -67,7 +68,7 @@ html {
   box-shadow: 0 1px 7px rgba(90, 217, 243, 0.5);
 }
 
-.nav:after{
+.nav:after, .footer:before{
   width: 100vw !important;  
   margin-top: 0;
   height: 4px;
