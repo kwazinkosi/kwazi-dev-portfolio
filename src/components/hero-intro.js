@@ -9,10 +9,10 @@ const IntroText = ({text, index}) => {
 
 const HeroIntro = ({heading, introTexts}) => {
   return ( 
-    <div className="flex flex-col justify-center text-white sm:text-lg md:text-xl lg:text-2xl m-6 md:m-8 lg:m-12">
+    <div className="flex flex-col justify-center text-white sm:text-lg md:text-xl lg:text-2xl  mb-4 mr-auto ml-auto ">
       <div className="flex flex-row ">
         {/* Intro point */}
-        <div className="flex flex-row  w-8 h-14 rounded-full border-2 border-primary mr-8  bg-secondary/10 justify-left  text-3xl sm:text-4xl md:text-5xl lg:text-6xl max-w-xl">
+        <div className="flex flex-row w-8 h-14 rounded-full border-2 border-primary mr-8  bg-secondary/10 justify-left max-w-xl">
         </div> 
          {/*Heading  */}
         <h1 style={{fontFamily: "overpass"}} className="font-bold mb-6 text-left text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
