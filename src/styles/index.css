@@ -56,8 +56,7 @@ html {
 
   letter-spacing: 0.02em; 
   font-weight: extra-bold;
-  color: theme('colors.primary');
-  
+  color: theme('colors.primary'); 
 }
 .mobile-nav-text{
   font-size: theme('fontSize.2xl');

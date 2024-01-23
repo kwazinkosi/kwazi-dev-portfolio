@@ -1,0 +1,75 @@
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 3rem;
+    color: white;
+    width: 40%;
+    height: 60%;
+    padding: 2rem 4rem;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, theme('colors.tertiary1'), theme('colors.primary'));
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.form input, .form textarea{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    border: none;
+    background: rgba(255,255,255,0.2);
+    color: theme('colors.tertiary1');
+    font-size: 1rem;
+    font-family: 'work sans', 'firacode';
+    font-weight: bold;
+    letter-spacing: 0.015em;
+    outline: none;
+}
+.form input:focus{
+    background: rgba(236, 254, 255, 0.623);
+    color: theme('colors.tertiary1');
+    outline: none;
+}
+
+.form textarea{
+    background: rgba(235, 241, 180, 0.2);
+    height: 10rem;
+    border-radius: 5px;
+    resize: none;
+}
+.form textarea:focus{
+    font-family: 'overpass', 'firacode';
+    background: rgba(236, 254, 255, 0.623);
+    color: theme('colors.tertiary1');
+    outline: none;
+}
+
+label{
+    font-size: 1rem;
+    font-family: 'overpass', 'firacode';
+    font-weight: bold;
+    letter-spacing: 0.015em;
+    color: theme('colors.secondary');
+}
+
+.error-message{
+    color: red;
+    font-size: 0.9rem;
+    font-family: 'overpass', 'firacode';
+    font-weight: semi-bold;
+    letter-spacing: 0.015em;
+    margin-top: -0.2rem;
+}
+
+.input-field{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    font-size: small;
+}

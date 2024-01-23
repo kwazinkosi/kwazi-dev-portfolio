@@ -18,12 +18,11 @@ export default function Hexagon({photo, text}) {
         
         {photo && <img className="img" src={photo} alt="Kwazi" />} 
         {text && <div className="hexagon-text text-center text-white w-full h-full/2">
-          <p className="text-xl text-left max-w-xl mb-2 sm:text-lg md:text-xl lg:text-2xl">
+          <p className="text-xl text-left max-w-xl mb-2 px-4 sm:text-lg md:text-xl lg:text-2xl">
             {text}
           </p>
         </div>}
       </div>
-      
     </div>
   );
 }
