@@ -35,7 +35,7 @@ export default function ContactForm() {
             validationSchema={validationSchema}
             onSubmit={handleSubmit}>
             {({ isSubmitting, isValid }) => (    
-                <Form className="form flex flex-col items-center justify-center gap-4 p-4 rounded-lg shadow-lg">
+                <Form name="contact" data-netlify="true" className="form flex flex-col items-center justify-center gap-4 p-4 rounded-lg shadow-lg">
                     <label>
                         Name:
                         <Field type="text" name="name" placeholder="Enter your name" />
