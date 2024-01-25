@@ -36,7 +36,7 @@ export default function ContactForm() {
             validationSchema={validationSchema}
             onSubmit={handleSubmit}>
             {({ isSubmitting, isValid }) => (    
-                <Form name="contact" netlify className="form flex flex-col items-center justify-center gap-4 p-4 rounded-lg shadow-lg">
+                <Form name="contact" method="POST" data-netlify="true" className="form flex flex-col items-center justify-center gap-4 p-4 rounded-lg shadow-lg">
                     <label htmlFor="name">
                         Name:
                         <Field type="text" name="name" placeholder="Enter your name" />
@@ -53,7 +53,7 @@ export default function ContactForm() {
                         <ErrorMessage name="message" component="div" className='error-message' />
                     </label>
                     <Button type="submit" text="Submit" disabled={isSubmitting || !isValid} />
-                    {isSubmitted && <p className='text-green-500'>Your message has been submitted!</p>}
+                    {isSubmitted && <div className='text-green-500 text-center bg-tertiary2 rounded-lg p-2'>Message sent successfully!</div>}
                 </Form>
             )}
         </Formik>
