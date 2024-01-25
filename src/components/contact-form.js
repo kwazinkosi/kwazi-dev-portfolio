@@ -37,6 +37,7 @@ export default function ContactForm() {
             onSubmit={handleSubmit}>
             {({ isSubmitting, isValid }) => (    
                 <Form name="contact" method="POST" data-netlify="true" className="form flex flex-col items-center justify-center gap-4 p-4 rounded-lg shadow-lg">
+                    <input type="hidden" name="form-name" value="contact" />
                     <label htmlFor="name">
                         Name:
                         <Field type="text" name="name" placeholder="Enter your name" />
