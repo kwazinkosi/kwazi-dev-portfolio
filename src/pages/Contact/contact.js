@@ -10,7 +10,7 @@ export default function contact() {
     <div className="flex flex-col min-h-screen z-10 bg-gradient-to-b from-tertiary1 to-tertiary2">
       <Navbar />
       <div className="flex flex-col items-center justify-center flex-1 px-20 text-center">
-        <h1 className="text-5xl font-bold text-white">Contact</h1>
+        <h1 className="text-5xl font-bold text-white my-20 md:my-36 lg:my-40">Contact Me</h1>
         <ContactForm/> 
       </div>
 

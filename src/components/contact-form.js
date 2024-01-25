@@ -5,7 +5,7 @@ import { useState } from 'react';
 import "../styles/contact.css";
 
 
-export default function ContactForm() {
+export default function ContactForm() { 
     
     const [isSubmitted, setIsSubmitted] = useState(false);
 
