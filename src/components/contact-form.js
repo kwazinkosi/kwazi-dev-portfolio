@@ -54,7 +54,7 @@ export default function ContactForm() {
                         <ErrorMessage name="message" component="div" className='error-message' />
                     </label>
                     <Button type="submit" text="Submit" disabled={isSubmitting || !isValid} />
-                    {isSubmitted && <div className='text-green-500 text-center bg-tertiary2 rounded-lg p-2'>Message sent successfully!</div>}
+                    {isSubmitted && <div className=' text-green-500 text-center bg-tertiary2 rounded-lg p-2 lg:p-4'>Message sent successfully!</div>}
                 </Form>
             )}
         </Formik>
