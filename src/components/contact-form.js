@@ -10,9 +10,10 @@ export default function ContactForm() {
     const [isSubmitted, setIsSubmitted] = useState(false);
 
     const validationSchema = Yup.object({
-        name: Yup.string().required('Name is required.'),
+        name: Yup.string()
+        .matches(/^[a-zA-Z ]*$/, 'Please enter valid name'),
         email: Yup.string().email('Email is invalid.').required('Email is required.'),
-        message: Yup.string().required('Message is required.'),
+        message: Yup.string().min(5, 'Message must be at least 5 characters.').required('Message is required.'),
     });
 
     const handleSubmit = (values, { setSubmitting, resetForm }) => {
