@@ -6,8 +6,8 @@
     justify-content: center;
     margin: 0 auto;
     margin-top: 3rem;
-    color: white;
-    width: 40%;
+    color: #ffffff;
+    width: 500px;
     height: 60%;
     padding: 2rem 4rem;
     border-radius: 10px;
@@ -37,7 +37,7 @@
 
 .form textarea{
     background: rgba(235, 241, 180, 0.2);
-    height: 10rem;
+    height: 8rem;
     border-radius: 5px;
     resize: none;
 }
@@ -76,12 +76,31 @@ label{
 
 @media screen and (max-width: 768px){
     .form{
-        width: 80%;
+        width: 90%;
+        color:#cf0606;
+        padding: 2rem;
     }
 }  
 
 @media screen and (max-width: 480px){
     .form{
-        width: 90%;
+        width: 98%;
+        color:#cf0606;
+        padding: 2rem;
     }
+}
+
+
+.about-text:after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 5px;
+    border-radius: 0 0 50% 50%;
+    align-content: center;                         
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 1.8rem;
+    background: linear-gradient(to bottom, theme('colors.tertiary1'), theme('colors.primary'));
+    box-shadow: 0 1px 7px rgba(90, 217, 243, 0.5);
 }
