@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { useMatch } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faTimes } from "@fortawesome/free-solid-svg-icons"; 
 import logo from "../assets/images/mylogo.png";
 
 
@@ -35,20 +36,14 @@ export default function Navbar() {
   return (
     <nav className="nav from-tertiary1 to-tertiary2 bg-gradient-to-b fixed top-0 w-full z-10  hover:shadow-primary transition duration-500 ease-in-out">
       <div className="container mx-auto flex items-center justify-between my-2">
-        <div className="flex items-center ml-6">
+        <div className="flex items-center ml-4 sm:ml-12 md:ml-16 lg:ml-24">
           <NavLink to="/" className=""> 
             <img src={logo} alt="logo" className="w-10 h-8 sm:w-14 sm:h-8 md:w-14 md:h-10 lg:w-16 lg:h-12" />
           </NavLink>
         </div>
         {/* Bars icon for small screens */}
-        <div
-          className="flex md:hidden cursor-pointer z-20"
-          onClick={toggleNavbar}
-        >
-          <FontAwesomeIcon
-            icon={faBars}
-            className="text-primary text-2xl sm:mx-6 md:mx-8 mx-6"
-          />
+        <div className=" flex md:hidden cursor-pointer z-20 mr-4 sm:mr-12 md:mr-16 outline-none" onClick={toggleNavbar} >
+          <FontAwesomeIcon  {...(isOpen ? { icon: faTimes } : { icon: faBars })} className={`bar-to-close text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl ${isOpen ? 'animate' : ''}`}/>
         </div>
 
         {/* Overlay menu for small screens */}

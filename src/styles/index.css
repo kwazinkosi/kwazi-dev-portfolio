@@ -82,3 +82,26 @@ html {
   background: linear-gradient(to bottom, theme('colors.tertiary2'), theme('colors.primary'));
   box-shadow: 0 1px 6px rgba(90, 217, 243, 0.5);
 }
+
+/* animation for navbar bar icon to close icon */
+
+.bar-to-close {
+  /* transform: rotate(0deg); */
+  transition: transform 0.3s ease-in-out;
+} 
+
+.bar-to-close.animate {
+  animation: rotate 0.3s linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
