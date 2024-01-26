@@ -47,7 +47,6 @@ export default function Navbar() {
         </div>
 
         {/* Overlay menu for small screens */}
-        {/* TODO: change bar icon to close icon when overlay is open */}
         <div className={`lg:flex md:flex items-center sm:mx-6 md:mx-12 lg:mx-16 mx-6 ${isOpen
               ? "fixed z-0 top-0 left-0 right-0 bottom-0 mt-12 pt-auto h-screen bg-gradient-to-b from-tertiary1 to-tertiary2  bg-opacity-100 flex flex-col text-center text-xl"
               : "hidden"

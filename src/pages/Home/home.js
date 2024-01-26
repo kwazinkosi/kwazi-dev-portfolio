@@ -6,15 +6,12 @@ import Socials from "../../components/socials";
 import Button from "../../components/button";
 import { useNavigate } from "react-router-dom";
 
-// TODO: polish up the colors, footer and socials components => DONE
-// TODO: add a favicon
 // TODO: add a 404 page
 // TODO: add a loading page
-// TODO: remove unnecessary margins and paddings => DONE
 
 const introTexts = [
   "—A passionate freelance full-stack web developer with a knack for crafting digital solutions that leave a lasting impact.", 
-  "Let's create something extraordinary together, where innovation meets seamless functionality."
+  "Let's create something extraordinary, where innovation meets seamless functionality."
 ];
 const heading = "Hello there! 👋 I'm Kwazi";
 //  [Your Name], a passionate  web developer with a knack for crafting digital solutions that leave a lasting impact. 
