@@ -41,10 +41,13 @@ export default function AboutCard({aboutHeading, aboutText}) {
 
     const handleOnFocus = () => {
         if (isMobile ) {
-            setIsFocused(true);
-            if (!isActive) {
-                setIsActive(true);
-            }
+            
+            setTimeout(() => {
+                setIsFocused(true);
+                if (!isActive) {
+                    setIsActive(true);
+                }
+            }, 500);
         }
     };
 

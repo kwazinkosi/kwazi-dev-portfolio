@@ -9,7 +9,7 @@
     color: #ffffff;
     width: 500px;
     height: 60%;
-    padding: 2rem 4rem;
+    padding: 2rem;  
     border-radius: 10px;
     background: linear-gradient(to bottom, theme('colors.tertiary1'), theme('colors.primary'));
     box-shadow: 0 0 2px rgba(0,0,0,0.5);
@@ -84,7 +84,7 @@ label{
 
 @media screen and (max-width: 480px){
     .form{
-        width: 98%;
+        width: 100%;
         color:#cf0606;
         padding: 2rem;
     }

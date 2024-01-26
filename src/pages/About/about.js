@@ -27,10 +27,7 @@ export default function about() {
     <div  className="flex flex-col min-h-screen z-10 bg-gradient-to-b from-tertiary1 to-tertiary2 flex-grow w-full">
       <Navbar/>
       <div className="flex flex-col items-center justify-center flex-1 mx-4 sm:mx-12 md:mx-16 lg:mx-24 text-center my-20 md:my-36 lg:my-40 ">
-        {/* <div className="flex flex-row  justify-center">
-          <Point/> */}
-          <h1 className="about text-5xl font-bold text-white">About</h1>
-        {/* </div> */}
+        <h1 className="about font-bold text-white text-4xl sm:text-4xl md:text-5xl lg:text-6xl">About Me</h1>
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4 md:gap-4 lg:gap-4 mt-4">
           {
             aboutTexts.map((text, index) => (

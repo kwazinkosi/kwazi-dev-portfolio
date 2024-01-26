@@ -10,7 +10,7 @@ const IntroText = ({text, index}) => {
 
 const HeroIntro = ({heading, introTexts}) => {
   return ( 
-    <div className="flex flex-col justify-center text-white sm:text-lg md:text-xl lg:text-2xl  mb-4 mr-auto ml-auto ">
+    <div className="flex flex-col justify-center text-white mb-4 mr-auto ml-auto ">
       <div className="flex flex-row ">
         {/* Intro point */}
         <Point/> 
