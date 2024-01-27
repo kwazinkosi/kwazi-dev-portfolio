@@ -1,0 +1,13 @@
+.portfolio:after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 5px;
+    border-radius: 0 0 50% 50%;
+    align-content: center;                         
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 1.8rem;
+    background: linear-gradient(to bottom, theme('colors.tertiary1'), theme('colors.primary'));
+    box-shadow: 0 1px 7px rgba(90, 217, 243, 0.5);
+}
