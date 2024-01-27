@@ -16,7 +16,6 @@ export default function projects() {
       </div>
       <div className=" flex flex-grow flex-col justify-end w-full">
         <Footer className="" >
-          {/* <Socials /> */}
         </Footer>
       </div>
     </div> 
