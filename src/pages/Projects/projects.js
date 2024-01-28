@@ -1,6 +1,6 @@
 import Footer from "../../components/footer"
 import Navbar from "../../components/navbar"
-import Card from "../../components/portfolio-card"
+// import Card from "../../components/portfolio-card"
 import "../../styles/portfolio.css"
 
 export default function projects() {
