@@ -29,7 +29,6 @@ export default function Navbar() {
     false
   );
   const toggleNavbar = () => {
-    // console.log("clicked");
     setIsOpen(!isOpen);
   };
 
