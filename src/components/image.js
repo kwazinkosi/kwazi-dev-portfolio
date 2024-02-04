@@ -1,6 +1,5 @@
 import Hexagon from "./hexagon";
-import photo from "../assets/images/kwazi.png";
-
+import photo from "../assets/images/kwazi05.png";
 
 export default function image() {
   return (

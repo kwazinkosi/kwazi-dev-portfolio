@@ -13,8 +13,6 @@ export default function Navbar() {
   const matchAbout = useMatch("/about");
   const matchProjects = useMatch("/projects");
   const matchHome = useMatch("/");
-
-
   // Detect initial orientation
   let isLandscape = window.matchMedia("(orientation: landscape)").matches;
 
@@ -34,9 +32,9 @@ export default function Navbar() {
 
   return (
     <nav className="nav from-tertiary1 to-tertiary2 bg-gradient-to-b fixed top-0 w-full z-10  hover:shadow-primary transition duration-500 ease-in-out">
-      <div className="container mx-auto flex items-center justify-between my-2">
-        <div className="flex items-center ml-6 sm:ml-12 md:ml-16 lg:ml-24">
-          <NavLink to="/" className=""> 
+      <div className="flex items-center justify-between my-2">
+        <div className="flex items-start ">
+          <NavLink to="/" className="ml-8 sm:ml-12 md:ml-16 lg:ml-24 "> 
             <img src={logo} alt="logo" className="w-10 h-8 sm:w-14 sm:h-8 md:w-14 md:h-10 lg:w-16 lg:h-12" />
           </NavLink>
         </div>

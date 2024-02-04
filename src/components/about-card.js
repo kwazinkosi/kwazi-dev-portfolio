@@ -6,7 +6,20 @@ export default function AboutCard({aboutHeading, aboutText}) {
     const [isFocused, setIsFocused] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
     const [isTablet, setIsTablet] = useState(window.innerWidth >= 640 && window.innerWidth < 1024);
-    const cardRef = useRef(null);
+    const [isLandscape, setIsLandscape] = useState(window.matchMedia("(orientation: landscape)").matches);
+
+    const cardRef = useRef(null); // create a reference to the div
+
+
+    window.addEventListener("resize", function () {
+
+        setIsMobile(window.innerWidth < 640);
+        setIsTablet(window.innerWidth >= 640 && window.innerWidth < 1024);
+        setIsLandscape(window.matchMedia("(orientation: landscape)").matches);
+        if (isLandscape && isActive) {
+            setIsActive(false);
+        }
+    });
 
     const updateScreenSize = () => {
         setIsFocused(false);
@@ -34,7 +47,8 @@ export default function AboutCard({aboutHeading, aboutText}) {
     }, [isMobile]);
 
     const handleOnClick = () => {
-        if (isMobile || isTablet) {
+        console.log('clicked, isMobile:', isMobile, 'isActive:', isActive, 'isTablet:', isTablet, 'isLandscape:', isLandscape);
+        if (isMobile || isTablet || isLandscape) { 
             setIsActive(!isActive);
         }
     };

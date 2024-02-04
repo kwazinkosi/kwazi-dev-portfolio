@@ -31,7 +31,7 @@ export default function about() {
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4 md:gap-4 lg:gap-4 mt-4">
           {
             aboutTexts.map((text, index) => (
-              <AboutCard aboutHeading={aboutHeadings[index]} aboutText={text} />
+              <AboutCard key={index} aboutText={text} aboutHeading={aboutHeadings[index]} />
             ))
           }
         </div>
