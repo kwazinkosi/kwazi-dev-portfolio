@@ -36,7 +36,7 @@ export default function ContactForm() {
             validationSchema={validationSchema}
             onSubmit={handleSubmit}>
             {({ isSubmitting, isValid }) => (    
-                <Form name="contact" method="POST" data-netlify="true" className="form flex flex-col items-center justify-center gap-4 p-4 rounded-lg shadow-lg">
+                <Form name="contact" method="POST" netlify data-netlify="true" className="form flex flex-col items-center justify-center gap-4 p-4 rounded-lg shadow-lg">
                     <input type="hidden" name="form-name" value="contact" />
                     <label htmlFor="name">
                         Name:
