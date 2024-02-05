@@ -14,7 +14,7 @@ export default function PortfolioCard({title, description, image, link}) {
         <div className="flex flex-col justify-center ">
             <h3 className="text-2xl font-bold text-white mt-4 font-overpass">{title}</h3>
             <p className="text-lg text-white mt-4">{description}</p>
-            <div className="mt-4 flex justify-center md:justify-start">
+            <div className="mt-4 flex justify-start">
                 <Button text="View Project" onClick={onclick} />
             </div>
         </div>
