@@ -9,7 +9,7 @@ const portData = [
         title: 'My Portfolio',
         description: 'My portfolio website to showcase my work',
         image: myport,
-        github: 'https://www.github.com/kwazinkosi/kwazi-portfolio',
+        github: 'https://www.github.com/kwazinkosi/kwazi-dev-portfolio',
     },
     {
         id: 2,
@@ -30,11 +30,8 @@ const portData = [
         title: 'My Portfolio',
         description: 'A website for my portfolio',
         image: myport,
-        github: 'https://www.github.com/kwazinkosi/kwazi-portfolio',
-    },
-    
-
-   
+        github: 'https://www.github.com/kwazinkosi/kwazi-dev-portfolio',
+    },   
 ];
 
 export default portData;

@@ -40,17 +40,17 @@ export default function ContactForm() {
                     <input type="hidden" name="form-name" value="contact" />
                     <label htmlFor="name">
                         Name:
-                        <Field type="text" name="name" placeholder="Enter your name" />
+                        <Field id="name" type="text" name="name" placeholder="Enter your name" autoComplete="name" />
                         <ErrorMessage name="name" component="div" className='error-message' />
                     </label>
                     <label htmlFor="email">
                         Email:
-                        <Field type="email" name="email" placeholder="Enter your email" />
+                        <Field id="email" type="email" name="email" placeholder="Enter your email" autoComplete="email" />
                         <ErrorMessage name="email" component="div" className='error-message' />
                     </label>
-                    <label  htmlFor="message">
+                    <label htmlFor="message">
                         Message:
-                        <Field as="textarea" name="message" placeholder="Enter your message" />
+                        <Field id="message" as="textarea" name="message" placeholder="Enter your message" autoComplete="off" />
                         <ErrorMessage name="message" component="div" className='error-message' />
                     </label>
                     <Button type="submit" text="Submit" disabled={isSubmitting || !isValid} />
