@@ -3,6 +3,7 @@ import * as Yup from 'yup'; // for everything
 import Button from './button';
 import { useState } from 'react';
 import "../styles/contact.css";
+import React from 'react';
 
 
 export default function ContactForm() { 
@@ -57,6 +58,6 @@ export default function ContactForm() {
                     {isSubmitted && <div className=' text-green-500 text-center bg-tertiary2 rounded-lg p-2 lg:p-4'>Message sent successfully!</div>}
                 </Form>
             )}
-        </Formik>
+        </Formik> 
     );
 }
