@@ -11,7 +11,7 @@ export default function Socials() {
         <a href="mailto:kwazinkosizwane@gmail.com" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faEnvelope} className="text-2xl mx-2 text-secondary hover:text-primary hover:scale-110 transition duration-500 ease-in-out" />
         </a>
-        <a href="https://www.instagram.com/kwazi_zwane/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/kwazi09/" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faInstagram} className="text-2xl mx-2 text-secondary hover:text-primary hover:scale-110 transition duration-500 ease-in-out" />
         </a>
         <a href="https://www.linkedin.com/in/kwazinkosi-zwane-9b1b3a1b0/" target="_blank" rel="noopener noreferrer">
