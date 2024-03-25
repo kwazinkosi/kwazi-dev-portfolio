@@ -1,5 +1,5 @@
 import { Formik, Field, Form, ErrorMessage } from 'formik';
-import * as Yup from 'yup'; // for everything
+import * as Yup from 'yup'; // Used for validation
 import Button from './button';
 import { useState } from 'react';
 import "../styles/contact.css";
@@ -10,34 +10,54 @@ export default function ContactForm() {
     
     const [isSubmitted, setIsSubmitted] = useState(false);
 
+    // Function to encode the form data in the format required by Netlify
+    const encode = (data) => {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+            .join('&');
+    }
+    // Validation schema for the form
     const validationSchema = Yup.object({
         name: Yup.string()
         .matches(/^[a-zA-Z ]*$/, 'Please enter valid name'),
-        email: Yup.string().email('Email is invalid.').required('Email is required.'),
+        email: Yup.string().matches(/^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/, 'Please enter valid email').required('Email is required.'),
         message: Yup.string().min(5, 'Message must be at least 5 characters.').required('Message is required.'),
     });
-
+    // Function to handle form submission
     const handleSubmit = (values, { setSubmitting, resetForm }) => {
         console.log('Name:', values.name);
         console.log('Email:', values.email);
         console.log('Message:', values.message);
         
-        setIsSubmitted(true);
+        // Netlify form submission through fetch API
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: encode({ 'form-name': 'contact', ...values }) // Encode the form data
+        })
+        .then(() => {
+            // Set the form as submitted and reset the form so the user can submit another message
+            setIsSubmitted(true);
+            resetForm();
+        })
+        .catch(error => alert(error))
+        .finally(() => setSubmitting(false));
+
         //Hide the form after submission
         setTimeout(() => {
             setIsSubmitted(false);
         }, 5000);
-        // Clear the form
-        resetForm();
-        setSubmitting(false);
     };
 
     return (
-        <Formik initialValues={{ name: '', email: '', message: '' }}
-            validationSchema={validationSchema}
+        <Formik 
+            initialValues={{ name: '', email: '', message: '' }} 
+            validationSchema={validationSchema} 
             onSubmit={handleSubmit}>
+           
             {({ isSubmitting, isValid }) => (    
-                <Form name="contact" method="POST" netlify data-netlify="true" className="form flex flex-col items-center justify-center gap-4 p-4 rounded-lg shadow-lg">
+                // <Form name="contact" method="POST" netlify data-netlify="true" className="form flex flex-col items-center justify-center gap-4 p-4 rounded-lg shadow-lg">
+                <Form name="contact" className="form flex flex-col items-center justify-center gap-4 p-4 rounded-lg shadow-lg">
                     <input type="hidden" name="form-name" value="contact" />
                     <label htmlFor="name">
                         Name:

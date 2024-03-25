@@ -82,7 +82,7 @@ export default function AboutCard({aboutHeading, aboutText}) {
         onFocus={handleOnFocus}
         onBlur={handleOnBlur}
         data-heading={aboutHeading}
-        tabIndex="0" // make the div focusable
+        tabIndex="0" // make the div focusable ...
     >
         <h2 className="heading text-2xl font-bold text-center text-secondary  hidden">{aboutHeading}</h2>
         <p className="mt-4 text-lg text-center text-white">{aboutText}</p>
