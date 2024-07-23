@@ -24,7 +24,7 @@ const portData = [
         description: 'An 80s arcade game made with C++ and SFML',
         image: Defender,
         github: 'https://www.github.com/kwazinkosi/Defender',
-        videoPath: './demo.mp4',
+        videoPath: '../assets/vids/demo.mp4',
     },
     
     {
