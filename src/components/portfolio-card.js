@@ -4,7 +4,7 @@ import DemoVideo from './video-embed';
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 
-function PortfolioCard({ title, description, image, link, videoPath }) {
+export default function PortfolioCard({ title, description, image, link, videoPath }) {
     const [modalIsOpen, setIsOpen] = useState(false);
 
     const openModal = () => {
