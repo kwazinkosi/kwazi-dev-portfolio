@@ -8,7 +8,7 @@ export default function projects() {
   return (
     <div className="flex flex-col min-h-screen z-10 bg-gradient-to-b from-tertiary1 to-tertiary2 flex-grow w-full">
       <Navbar />
-      {                                                                                                                              */}
+      
       <div className="flex flex-col justify-center w-full my-24 md:my-36 lg:my-40">
         <div className="flex flex-col items-center justify-center text-center flex-1 p-8 mx-4 sm:mx-12 md:mx-16 lg:mx-24 text-white ">
           <h1 className="portfolio font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
