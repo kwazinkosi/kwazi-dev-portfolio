@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 // TODO: add a loading page
 
 const introTexts = [
-  "—A passionate full-stack web developer with a knack for crafting digital solutions that leave a lasting impact.", 
+  "—An aspiring world class software engineer with a knack for crafting digital solutions that leave a lasting impact.", 
   "Let's create something extraordinary, where innovation meets seamless functionality."
 ];
 const heading = "Hello there! 👋 I'm Kwazi";

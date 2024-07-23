@@ -21,7 +21,7 @@ export default function projects() {
         
         <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-8 mt-4 mx-8 sm:mx-12 md:mx-16 lg:mx-24 my-8">      
           {portData.map((data, i) => (
-            <Card  key={i} title={data.title} description={data.description} image={data.image} link={data.github} />   
+            <Card  key={i} title={data.title} description={data.description} image={data.image} link={data.github} video={data.videoPath} />   
           ))}
         </div>
       </div>
