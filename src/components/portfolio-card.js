@@ -5,6 +5,8 @@ import React, { useState } from 'react';
 import Modal from 'react-modal';
 
 export default function PortfolioCard({ title, description, image, link, videoPath }) {
+   
+    console.log("path is " + videoPath);
     const [modalIsOpen, setIsOpen] = useState(false);
 
     const openModal = () => {
@@ -32,6 +34,7 @@ export default function PortfolioCard({ title, description, image, link, videoPa
                         <Button text="View Project" onClick={handleClick} />
                     </div>
                     {
+
                         videoPath && ( // Using short-circuit evaluation for cleaner syntax
                             <div className="mt-4 flex justify-end">
                                 <Button text="View Demo" onClick={openModal}/>
