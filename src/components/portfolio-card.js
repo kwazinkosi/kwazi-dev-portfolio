@@ -18,6 +18,7 @@ export default function PortfolioCard({title, description, image, link}) {
                 <div className="mt-4 flex justify-start">
                     <Button text="View Project" onClick={handleClick} />
                 </div>
+
             </div>
         </div>
     )

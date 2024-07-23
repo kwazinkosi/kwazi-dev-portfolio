@@ -5,15 +5,16 @@ import AboutCard from "../../components/about-card";
 // import Point from "../../components/point";
 
 const aboutTexts = [
-  "—Hey, I'm Kwazi—your friendly neighborhood web developer! Currently navigating the wild world of Electrical Engineering studies at Wits University, I've got a knack for turning coding challenges into triumphs.",
+  "—Hey, I'm Kwazi—your friendly neighborhood software engineer! Currently navigating the wild world of Automation testing, I've got a knack for turning coding challenges into triumphs.",
   "My experience ranges from crafting engaging C++ games to developing innovative IoT projects in both assembly and C++. And with a solid foundation in both back-end and front-end technologies, I bring a versatile skill set to the table.",
   "When I'm not immersed in textbooks or writing lines of code, you'll find me exploring the latest web trends, diving into the tech community, and occasionally wrestling with the ever-elusive bug or just playing my guitar. ",
   "My journey isn't just about the syntax—I'm on a mission to inject creativity into every project. From designing sleek interfaces to engineering robust back-end solutions, I deliver end-to-end solutions tailored to your business needs.",
   "For me, it's not just about what I've learned; it's about what I'm hungry to discover next. I thrive on the thrill of constant exploration and innovation in the vast landscape of web development. Always ready to learn and grow.", 
-  "With hands-on experience in JavaScript, React, Node.js, PHP, SQL, HTML, CSS, Tailwind, Boostrap, Material UI, Python, Django, C++ and avr assembly , I've honed my skills across a diverse tech stack.",
+  "With hands-on experience in the LAMP, Python-Django and MERN stack, SQL, Tailwind, Boostrap, Material UI, C++, avr assembly and automation testing , I've honed my skills across a diverse tech stack.",
 ];
 
-const aboutHeadings =[
+// string array
+const aboutHeadings = [
   "Behind the Code",
   "Crafting Digital Magic",
   "Beyond the Books",
